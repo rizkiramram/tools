@@ -68,7 +68,7 @@ def setupYTA():
         runSh('cp ffmpeg-*-static/ffmpeg ffmpeg-*-static/ffprobe /usr/local/bin/')
         runSh('rm ffmpeg-5.1.1-amd64-static.tar.xz')
         runSh('rm -rf ffmpeg-*-static')
-        runSh('wget https://raw.githubusercontent.com/ImPeekaboo/mytools/main/source/ytarchive -O /usr/local/bin/ytarchive')
+        runSh('wget https://github.com/rizkiramram/tools/raw/main/ytarchive -O /usr/local/bin/ytarchive')
         runSh('chmod +x /usr/local/bin/ytarchive')
         runSh('pip install yt-dlp')
         runSh('mkdir archive-result')
@@ -141,7 +141,7 @@ def installGF():
 
         loadingAn()
         textAn('Installing Gofile...')
-        runSh('wget https://raw.githubusercontent.com/ImPeekaboo/mytools/main/source/gofile -O /usr/local/bin/gofile')
+        runSh('wget https://raw.githubusercontent.com/rizkiramram/tools/main/gofile -O /usr/local/bin/gofile')
         runSh('chmod +x /usr/local/bin/gofile')
         clear_output()
         print('Gofile is Installed!')
