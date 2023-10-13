@@ -192,6 +192,25 @@ def installMEGA():
         time.sleep(2)
         clear_output()
 
+def installAria2():
+    import os
+
+    if not os.path.exists("/usr/bin/aria2c"):
+        from IPython.display import clear_output
+        import time, os
+    
+        delete_path = '/content/sample_data'
+        if os.path.exists(delete_path):
+            runSh('rm -rf "/content/sample_data"')
+
+        loadingAn()
+        textAn("Installing Aria2...")
+        runSh('sudo apt-get -y update')
+        runSh('sudo apt-get install aria2')
+        clear_output()
+        print("Aria2 is Installed!")
+        time.sleep(2)
+        clear_output()
 
 def installLT():
     import importlib
