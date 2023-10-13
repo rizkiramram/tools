@@ -20,8 +20,6 @@ from rich.highlighter import JSONHighlighter
 from rich.panel import Panel
 from rich.progress import track
 
-from .__version__ import __version__
-
 
 def upload(file: str, best_server: str, folder_id: Optional[str] = None):
     f_obj = Path(file)
