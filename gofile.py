@@ -60,7 +60,7 @@ def gofile_upload(path: list,
                   open_urls: bool = False):
     highlighter = JSONHighlighter()
 
-    get_server = requests.get('https://apiv2.gofile.io/getServer')
+    get_server = requests.get('https://api.gofile.io/getServer')
     best_server = get_server.json()['data']['server']
 
     files = []
