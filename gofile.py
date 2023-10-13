@@ -172,7 +172,7 @@ def opts():
     parser.add_argument('-v',
                         '--version',
                         action='version',
-                        version=f'%(prog)s {__version__}')
+                        version=f'%(prog)s')
     return parser.parse_args()
 
 
@@ -186,6 +186,4 @@ def main():
         open_urls=args.open_urls,
     )
 
-
-if __name__ == '__main__':
     main()
