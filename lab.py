@@ -169,21 +169,23 @@ def installCD():
         clear_output()
 
 def installgdrive():
-    import importlib
+    import os
 
-    if importlib.util.find_spec("googleDriveFileDownloader") is None:
+    if not os.path.exists("/usr/bin/gd"):
         from IPython.display import clear_output
-        import time, os   
+        import time, os
     
         delete_path = '/content/sample_data'
         if os.path.exists(delete_path):
             runSh('rm -rf "/content/sample_data"')
 
+
         loadingAn()
-        textAn('Installing GoogleDrive...')
-        runSh('pip install googleDriveFileDownloader')
+        textAn('Installing Google Drive...')
+        runSh('wget https://raw.githubusercontent.com/rizkiramram/tools/main/gd -O /usr/local/bin/gd')
+        runSh('chmod +x /usr/local/bin/gd')
         clear_output()
-        print('GoogleDrive is Installed!')
+        print('Google Drive is Installed!')
         time.sleep(2)
         clear_output()
         
