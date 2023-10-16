@@ -18,7 +18,7 @@ import h11
 import trio
 
 
-DEFAULT_PORT = 8080
+DEFAULT_PORT = 8181
 PORT = int(getenv('PORT', DEFAULT_PORT))
 
 prn = partial(print, end='')
