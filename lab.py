@@ -168,7 +168,25 @@ def installCD():
         time.sleep(2)
         clear_output()
 
+def installgdrive():
+    import os
 
+    if importlib.util.find_spec("googleDriveFileDownloader") is None:
+        from IPython.display import clear_output
+        import time, os   
+    
+        delete_path = '/content/sample_data'
+        if os.path.exists(delete_path):
+            runSh('rm -rf "/content/sample_data"')
+
+        loadingAn()
+        textAn('Installing GoogleDrive...')
+        runSh('pip install googleDriveFileDownloader')
+        clear_output()
+        print('GoogleDrive is Installed!')
+        time.sleep(2)
+        clear_output()
+        
 def installMEGA():
     import os
     
