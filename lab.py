@@ -188,6 +188,25 @@ def installgdrive():
         print('Google Drive is Installed!')
         time.sleep(2)
         clear_output()
+
+def installmediafire():
+    import importlib
+    
+    if importlib.util.find_spec("mf") is None:
+        from IPython.display import clear_output
+        import time, os
+    
+        delete_path = '/content/sample_data'
+        if os.path.exists(delete_path):
+            runSh('rm -rf "/content/sample_data"')
+
+        loadingAn()
+        textAn('Installing Mediafire...')
+        runSh('pip install git+https://raw.githubusercontent.com/rizkiramram/tools/main/mf')
+        clear_output()
+        print('Mediafire is Installed!')
+        time.sleep(2)
+        clear_output()
         
 def installMEGA():
     import os
