@@ -169,7 +169,7 @@ def installCD():
         clear_output()
 
 def installgdrive():
-    import os
+    import importlib
 
     if importlib.util.find_spec("googleDriveFileDownloader") is None:
         from IPython.display import clear_output
